@@ -1,0 +1,47 @@
+@import "owl.carousel.css";
+@import "owl.theme.default.css";
+@import "mixin";
+@import "fonts.css";
+@import url(https://fonts.googleapis.com);
+@import url(https://fonts.gstatic.com);
+@import url(https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap);
+
+
+$font1:'interregular';
+$font2:'Readex Pro', sans-serif;
+
+$fS_base: 14px;
+$fs_1: calc($fS_base + 1px);
+$fs_2: calc($fS_base + 2px);
+$fs_3: calc($fS_base + 3px);
+$fs_4: calc($fS_base + 4px);
+$fs_-1: calc($fS_base - 1px);
+
+$h_fs: calc($fS_base + 8px);
+$h_fs_1: calc($h_fs + 2px);
+$h_fs_2: calc($h_fs + 6px);
+$h_fs_3: calc($h_fs + 10px);
+$h_fs_4: calc($h_fs + 20px);
+$h_fs_5: calc($h_fs + 36px);
+
+
+$f_color1:#000000;
+$f_color2:#FFFFFF;
+$f_color3:#C0C0C0;
+
+$bg_color1:#F5F5F5;
+$bg_color2:#DCE5E2;
+$bg_color3:#FFFFFF;
+$bg_color4:#F8F9FA;
+$bg_color4:#000000;
+
+$bor_color1:#C5C5C5;
+$bor_color1:#000000;
+
+
+.test{
+  font-family: $font1;
+}
+.test2{
+  font-family:$font2;
+}
