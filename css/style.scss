@@ -325,13 +325,13 @@ $reset-time: 150ms;
   display: inline-block;
   position: relative;
   border-radius: 50px;
-  padding: 0;
-  line-height: 14px;
+  padding: 0 3px;
+  line-height: 17px;
 
   input[type="text"] {
     font-family: $font1;
     font-size: 14px;
-    width: 17px;
+    width: 12px;
     height: 16px;
     padding: 0;
     border: none;
@@ -346,6 +346,7 @@ $reset-time: 150ms;
 
     &:focus, &:not(:placeholder-shown) {
       width: 200px;
+      height: 30px;
       transition: width $search-time cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
       + button[type="reset"] {
@@ -400,8 +401,8 @@ $reset-time: 150ms;
 }
 
 .search-box input[type=text]:focus + button[type=reset], .search-box input[type=text]:not(:placeholder-shown) + button[type=reset] {
-  bottom: 5px;
-  right: 5px;
+  bottom: 12px;
+  right: 10px;
   transition: bottom 150ms ease-out 800ms, right 150ms ease-out 800ms;
 }
 
@@ -413,6 +414,12 @@ $reset-time: 150ms;
     }
   }
 }
+.search-box input[type=text]:not(:placeholder-shown) + .search-box button[type=reset]:before{
+      height: 12px;
+      top: 1px;
+    }
+
+
 
 header {
   nav {
