@@ -277,7 +277,7 @@ header .nav-item .nav-link {
   font-family: "interregular";
   font-size: 14px;
   width: 10px;
-  height: 15px;
+  height: 14px;
   padding: 0;
   border: none;
   box-sizing: border-box;
@@ -317,7 +317,7 @@ header .nav-item .nav-link {
   align-items: center;
   position: absolute;
   bottom: -9px;
-  right: -8px;
+  right: -9px;
   transition: bottom 150ms ease-out 150ms, right 150ms ease-out 150ms;
 }
 .search-box button[type=reset]:before, .search-box button[type=reset]:after {
