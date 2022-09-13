@@ -271,13 +271,13 @@ header .nav-item .nav-link {
   position: relative;
   border-radius: 50px;
   padding: 0 3px;
-  line-height: 17px;
+  line-height: 16px;
 }
 .search-box input[type=text] {
   font-family: "interregular";
   font-size: 14px;
-  width: 12px;
-  height: 16px;
+  width: 10px;
+  height: 15px;
   padding: 0;
   border: none;
   box-sizing: border-box;
