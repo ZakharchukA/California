@@ -350,14 +350,14 @@ $reset-time: 150ms;
       transition: width $search-time cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
       + button[type="reset"] {
-        bottom: 5px;
-        right: 5px;
+        bottom: 8px;
+        right: 10px;
         transition: bottom $reset-time ease-out $search-time, right $reset-time ease-out $search-time;
       }
 
       + button[type="reset"]:after {
-        top: 1px;
-        right: 4px;
+        top: 3px;
+        right: 7px;
         opacity: 1;
         height: 12px;
         transition: top $reset-time ease-out ($search-time + $reset-time), right $reset-time ease-out ($search-time + $reset-time), opacity $reset-time ease ($search-time + $reset-time);
@@ -367,8 +367,8 @@ $reset-time: 150ms;
 
   button[type="reset"] {
     background-color: transparent;
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     border: 0;
     padding: 0;
     outline: 0;
@@ -376,8 +376,8 @@ $reset-time: 150ms;
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: -6px;
-    right: -5px;
+    bottom: -9px;
+    right: -8px;
     transition: bottom $reset-time ease-out $reset-time, right $reset-time ease-out $reset-time;
 
     &:before, &:after {
@@ -401,8 +401,8 @@ $reset-time: 150ms;
 }
 
 .search-box input[type=text]:focus + button[type=reset], .search-box input[type=text]:not(:placeholder-shown) + button[type=reset] {
-  bottom: 12px;
-  right: 10px;
+  bottom: 8px;
+  right: 12px;
   transition: bottom 150ms ease-out 800ms, right 150ms ease-out 800ms;
 }
 
@@ -410,14 +410,14 @@ $reset-time: 150ms;
   input[type=text]:focus + button {
     &:before {
       height: 12px;
-      top: 1px;
+      top: 3px;
     }
   }
 }
 .search-box input[type=text]:not(:placeholder-shown) + .search-box button[type=reset]:before{
       height: 12px;
-      top: 1px;
-    }
+      top: 3px;
+}
 
 
 
