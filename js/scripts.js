@@ -1,4 +1,4 @@
-document.addEventListener('touchstart', onTouchStart, {passive: true});
+
 
 $(document).ready(function(){
     $( function() {

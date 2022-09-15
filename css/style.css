@@ -1,11 +1,18 @@
 @import "owl.carousel.css";
 @import "owl.theme.default.css";
-@import "fonts.css";
 @import "bootstrap.css";
 @import url(https://fonts.googleapis.com);
 @import url(https://fonts.gstatic.com);
 @import url(https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap);
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+@font-face {
+  font-family: "interregular";
+  src: url("../fonts/inter-regular-webfont.eot");
+  src: url("../fonts/inter-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/inter-regular-webfont.woff2") format("woff2"), url("../fonts/inter-regular-webfont.woff") format("woff"), url("../fonts/inter-regular-webfont.ttf") format("truetype"), url("../fonts/inter-regular-webfont.svg#interregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 a {
   display: inline-block;
   text-decoration: none;
