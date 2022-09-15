@@ -9,10 +9,8 @@ $(document).ready(function(){
         loop:true,
         margin:0,
         nav:true,
-        // autoplay:true,
-        autoplayTimeout:6000,
-        autoplayHoverPause:true,
         smartSpeed: 800,
+        autoHeight: true,
         lazyLoad:true,
         navText: [ '', ' ' ],
 
