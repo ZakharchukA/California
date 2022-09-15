@@ -1,3 +1,5 @@
+document.addEventListener('touchstart', onTouchStart, {passive: true});
+
 $(document).ready(function(){
     $( function() {
         $( "#accordion" ).accordion({
@@ -72,3 +74,4 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
+document.addEventListener('touchstart', onTouchStart, {passive: true});
