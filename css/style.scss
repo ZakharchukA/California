@@ -23,14 +23,14 @@
 $font1: 'interregular';
 $font2: 'Readex Pro', sans-serif;
 
-$fS_base: 14px;
-$fs_1: calc($fS_base + 1px); //15
-$fs_2: calc($fS_base + 2px); //16
-$fs_3: calc($fS_base + 3px); //17
-$fs_4: calc($fS_base + 4px); //18
-$fs_-1: calc($fS_base - 1px); //13
+$fs_base: 14px;
+$fs_1: calc($fs_base + 1px); //15
+$fs_2: calc($fs_base + 2px); //16
+$fs_3: calc($fs_base + 3px); //17
+$fs_4: calc($fs_base + 4px); //18
+$fs_-1: calc($fs_base - 1px); //13
 
-$h_fs: calc($fS_base + 8px); //22
+$h_fs: calc($fs_base + 8px); //22
 $h_fs_1: calc($h_fs + 2px); //24
 $h_fs_2: calc($h_fs + 6px); //28
 $h_fs_3: calc($h_fs + 10px); //32
@@ -346,7 +346,7 @@ header {
   .nav-item {
     .nav-link {
       font-family: $font1;
-      font-size: $fS_base;
+      font-size: $fs_base;
       line-height: $fs_3;
       text-transform: uppercase;
       color: $f_color1;
@@ -359,7 +359,7 @@ header {
 .dropdown-menu {
   a {
     font-family: $font1;
-    font-size: $fS_base;
+    font-size: $fs_base;
     line-height: $fs_3;
     text-transform: uppercase;
     color: $f_color1;
@@ -565,16 +565,11 @@ header {
         }
       }
     }
-
     .img_content {
-      //min-height: 550px;
-
       img {
         width: 100%;
         height: auto;
-        aspect-ratio: attr (647) / attr (550);
       }
-
     }
   }
 
@@ -673,12 +668,12 @@ header {
     max-width: 628px;
     margin: 0 auto 55px;
     font-family: $font2;
-    font-size: $fS_base;
+    font-size: $fs_base;
     line-height: $fs_3;
     color: $f_color1;
     text-align: center;
     @include max-screen(1024px) {
-      font-size: calc($fS_base * 0.85);
+      font-size: calc($fs_base * 0.85);
       line-height: calc($fs_3 * 0.85);
       margin-right: 0;
       margin-bottom: 20px;
@@ -747,4 +742,58 @@ header {
 
 .most_selled{
   padding: 72px 0 27px;
+  article{
+    .img-box{
+      //min-height: 270px;
+      max-width: 303px;
+      width: 100%;
+      padding: 28px;
+      margin: 0 auto 9px;
+      @include max-screen(1024px) {
+        padding: 10px 28px;
+        margin: auto;
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    h5{
+      font-family: $font2;
+      font-size: $h_fs;
+      line-height: $h_fs_2;
+      color: $f_color1;
+      @include max-screen(1024px) {
+        //font-size: calc($h_fs * 0.75);
+        //line-height: calc($h_fs_2 * 0.75)
+      }
+      @include max-screen(768px) {
+        //font-size: calc($h_fs * 0.5);
+        //line-height: calc($h_fs_2 * 0.5);
+      }
+    }
+    .img-box__desc{
+      font-family:$font1;
+      font-size: $fs_base;
+      line-height: $fs_3;
+      color: $f_color3;
+      min-height: 51px;
+      margin-bottom: 8px;
+      @include max-screen(1024px) {
+        //font-size: calc($fs_base * 0.7);
+        //line-height: calc($fs_3 * 0.7);
+      }
+    }
+    .price{
+      font-family:$font1;
+      font-size:$fs_4;
+      line-height: $h_fs;
+      color: $f_color3;
+
+      @include max-screen(1024px) {
+        font-size: calc($fs_4 * 0.7);
+        line-height: calc($h_fs * 0.7);
+      }
+    }
+  }
 }
