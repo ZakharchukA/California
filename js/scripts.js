@@ -73,5 +73,3 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
-
-document.addEventListener('touchstart', onTouchStart, {passive: true});

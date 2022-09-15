@@ -1,10 +1,10 @@
 @import "owl.carousel.css";
 @import "owl.theme.default.css";
 @import "bootstrap.css";
-@import url(https://fonts.googleapis.com);
-@import url(https://fonts.gstatic.com);
-@import url(https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap);
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700&display=swap");
 @font-face {
   font-family: "interregular";
   src: url("../fonts/inter-regular-webfont.eot");
@@ -490,6 +490,7 @@ header .nav-item .nav-link {
 .main_box .main_box_item .img_content img {
   width: 100%;
   height: auto;
+  aspect-ratio: attr 647/attr 550;
 }
 .main_box .item_1 {
   background-color: #DCE5E2;
@@ -499,10 +500,6 @@ header .nav-item .nav-link {
 }
 .main_box .item_3 {
   background-color: #dce5ec;
-}
-.main_box .item_3 .img_content img {
-  height: 70%;
-  width: auto;
 }
 
 .owl-nav .owl-prev {
