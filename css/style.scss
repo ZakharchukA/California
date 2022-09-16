@@ -52,10 +52,11 @@ $bg_color6: #dce5ec;
 $bor_color1: #C5C5C5;
 $bor_color1: #000000;
 
-a{
+a {
   display: inline-block;
   text-decoration: none;
-  &:hover{
+
+  &:hover {
     text-decoration: none;
   }
 }
@@ -378,8 +379,6 @@ $search-time: 800ms;
 $reset-time: 150ms;
 
 
-
-
 .search-box {
   border: solid 2px black;
   display: inline-block;
@@ -387,9 +386,11 @@ $reset-time: 150ms;
   border-radius: 50px;
   padding: 0 3px;
   line-height: 14px;
-  label{
+
+  label {
     display: none;
   }
+
   input[type="text"] {
     font-family: $font1;
     font-size: 14px;
@@ -565,6 +566,7 @@ header {
         }
       }
     }
+
     .img_content {
       img {
         width: 100%;
@@ -657,37 +659,42 @@ header {
   transition: .3s;
 }
 
+.headline {
+  max-width: 780px;
+  margin: 0 auto 9px;
+  text-align: center;
+}
+
+.subtitle {
+  max-width: 628px;
+  margin: 0 auto 55px;
+  font-family: $font2;
+  font-size: $fs_base;
+  line-height: $fs_3;
+  color: $f_color1;
+  text-align: center;
+  @include max-screen(1024px) {
+    font-size: calc($fs_base * 0.85);
+    line-height: calc($fs_3 * 0.85);
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
 
 .latest_offers {
   padding: 47px 0 28px;
-  .headline{
-    max-width: 780px;
-    margin: 0 auto 9px;
-  }
-  .latest_offers__desc {
-    max-width: 628px;
-    margin: 0 auto 55px;
-    font-family: $font2;
-    font-size: $fs_base;
-    line-height: $fs_3;
-    color: $f_color1;
-    text-align: center;
-    @include max-screen(1024px) {
-      font-size: calc($fs_base * 0.85);
-      line-height: calc($fs_3 * 0.85);
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-  }
-  article{
+
+  article {
     box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25);
     transition: .3s;
-    &:hover{
+
+    &:hover {
       transform: translateY(22px);
     }
-    p{
-      font-family:$font1;
-      font-size:$fs_1;
+
+    p {
+      font-family: $font1;
+      font-size: $fs_1;
       line-height: calc($fs_1 + 4px);
       color: $f_color1;
       @include max-screen(1024px) {
@@ -695,9 +702,10 @@ header {
         line-height: calc(calc($fs_1 + 4px) * 0.7);
       }
     }
-    h4{
-      font-family:$font2;
-      font-size:$h_fs_3;
+
+    h4 {
+      font-family: $font2;
+      font-size: $h_fs_3;
       line-height: calc($h_fs_3 + 6px);
       color: $f_color1;
       @include max-screen(1024px) {
@@ -709,13 +717,15 @@ header {
         line-height: calc(calc($h_fs_3 + 6px) * 0.7);
       }
     }
-    img{
+
+    img {
       width: 100%;
       height: 100%;
     }
 
   }
-  .laptop{
+
+  .laptop {
     padding: 0 42px;
     margin-bottom: 22px;
     @include max-screen(992px) {
@@ -724,26 +734,34 @@ header {
     }
 
   }
-  .watch{
+
+  .watch {
     padding: 0 42px;
     @include max-screen(992px) {
       padding: 0 15px;
     }
   }
-  .phones, .tablet{
-   a{
-     margin-bottom: 41px;
-     @include max-screen(992px) {
-       margin-bottom: 16px;
-     }
-   }
+
+  .phones, .tablet {
+    a {
+      margin-bottom: 41px;
+      @include max-screen(992px) {
+        margin-bottom: 16px;
+      }
+    }
   }
 }
 
-.most_selled{
-  padding: 72px 0 27px;
-  article{
-    .img-box{
+.most_selled {
+  padding-top: 72px;
+  padding-bottom: 27px;
+
+  .subtitle {
+    margin: 0 auto 31px;
+  }
+
+  article {
+    .img-box {
       //min-height: 270px;
       max-width: 303px;
       width: 100%;
@@ -753,12 +771,14 @@ header {
         padding: 10px 28px;
         margin: auto;
       }
-      img{
+
+      img {
         width: 100%;
         height: auto;
       }
     }
-    h5{
+
+    h5 {
       font-family: $font2;
       font-size: $h_fs;
       line-height: $h_fs_2;
@@ -772,21 +792,24 @@ header {
         //line-height: calc($h_fs_2 * 0.5);
       }
     }
-    .img-box__desc{
-      font-family:$font1;
+
+    .img-box__desc {
+      font-family: $font1;
       font-size: $fs_base;
       line-height: $fs_3;
       color: $f_color3;
       min-height: 51px;
+      max-width: 261px;
       margin-bottom: 8px;
       @include max-screen(1024px) {
         //font-size: calc($fs_base * 0.7);
         //line-height: calc($fs_3 * 0.7);
       }
     }
-    .price{
-      font-family:$font1;
-      font-size:$fs_4;
+
+    .price {
+      font-family: $font1;
+      font-size: $fs_4;
       line-height: $h_fs;
       color: $f_color3;
 
@@ -794,6 +817,119 @@ header {
         font-size: calc($fs_4 * 0.7);
         line-height: calc($h_fs * 0.7);
       }
+    }
+  }
+}
+
+.best_around {
+  padding-top: 47px;
+  padding-bottom: 28px;
+
+  .subtitle {
+    margin: 0 auto 56px;
+  }
+
+  article {
+    min-height: 453px;
+    background-color: $bg_color4;
+    border-radius: 16px;
+    padding: 41px 29px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @include max-screen(992px) {
+      min-height: 350px;
+    }
+
+    .img-box__desc {
+      font-family: $font2;
+      font-size: $fs_base;
+      line-height: $fs_3;
+      color: $f_color1;
+      text-align: center;
+      margin: 0;
+      @include max-screen(1024px) {
+        font-size: calc($fs_base * 0.85);
+        line-height: calc($fs_3 * 0.85);
+      }
+    }
+
+    h4 {
+      font-family: $font2;
+      font-size: $h_fs_2;
+      line-height: calc($h_fs_2 + 7px);
+      color: $f_color1;
+      margin-bottom: 30px;
+      @include max-screen(1024px) {
+        font-size: calc($h_fs_2 * 0.8);
+        line-height: calc(calc($h_fs_2 + 7px) * 0.8)
+      }
+    }
+
+    button {
+      max-width: 170px;
+      width: 100%;
+      min-height: 50px;
+      margin-bottom: 30px;
+      @include max-screen(992px) {
+        min-height: 35px;
+      }
+    }
+
+    .img-box {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.ideas {
+  padding-top: 47px;
+  padding-bottom: 24px;
+  .subtitle {
+    margin: 0 auto 56px;
+  }
+  .img-box{
+    background-image: url("../images/bg_img_ideas.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 420px;
+    border-radius: 16px;
+  }
+  .text_area{
+    font-family: $font1;
+    font-size: $h_fs_1;
+    line-height: calc($h_fs_1 + 6px);
+    color: $f_color1;
+    @include max-screen(1024px) {
+      font-size: calc($h_fs_1 * 0.85);
+      line-height: calc(calc($h_fs_1 + 6px) * 0.85);
+    }
+  }
+  .see_all{
+    display: flex;
+    justify-content: center;
+    font-family: $font1;
+    font-size: $h_fs_1;
+    line-height: calc($h_fs_1 + 5px);
+    color: $f_color1;
+    text-transform: capitalize;
+    &:after{
+      content: "";
+      display: block;
+      background-image: url(../images/up-right.svg);
+      width: 28px;
+      height: 30px;
+    }
+  }
+  .main_content{
+    margin-bottom: 73px;
+    @include max-screen(992px) {
+      margin-bottom: 30px;
     }
   }
 }
