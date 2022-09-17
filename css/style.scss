@@ -41,6 +41,8 @@ $h_fs_5: calc($h_fs + 36px); //58
 $f_color1: #000000;
 $f_color2: #FFFFFF;
 $f_color3: #4B4B4B;
+//$hov: #656c73;
+$hov: #9a9fa4;
 
 $bg_color1: #F5F5F5;
 $bg_color2: #DCE5E2;
@@ -55,7 +57,6 @@ $bor_color2: #000000;
 a {
   display: inline-block;
   text-decoration: none;
-
   &:hover {
     text-decoration: none;
   }
@@ -70,9 +71,14 @@ h1, h2 {
     font-size: calc($h_fs_5 * 0.85);
     line-height: calc(calc($h_fs_5 + 12px) * 0.85)
   }
-  @include max-screen(768px) {
+  @include max-screen(426px) {
     font-size: calc($h_fs_5 * 0.8);
     line-height: calc(calc($h_fs_5 + 12px) * 0.8);
+    text-align: center;
+  }
+  @include max-screen(320px) {
+    font-size: calc($h_fs_5 * 0.6);
+    line-height: calc(calc($h_fs_5 + 12px) * 0.5);
     text-align: center;
   }
 }
@@ -84,12 +90,8 @@ h3 {
   color: $f_color1;
   text-align: center;
   @include max-screen(1024px) {
-    font-size: calc($h_fs_4 * 0.8);
-    line-height: calc(calc($h_fs_4 + 12px) * 0.8)
-  }
-  @include max-screen(768px) {
-    font-size: calc($h_fs_4 * 0.7);
-    line-height: calc(calc($h_fs_4 + 10px) * 0.7);
+    font-size: calc($h_fs_4 * 0.9);
+    line-height: calc(calc($h_fs_4 + 12px) * 0.9)
   }
 }
 
@@ -141,6 +143,9 @@ header {
 
 .dineuron-menu .nav li a {
   color: #000000;
+}
+.dineuron-menu .nav li:hover a {
+  color: $hov;
 }
 
 .dineuron-menu .nav li {
@@ -783,13 +788,8 @@ header {
       font-size: $h_fs;
       line-height: $h_fs_2;
       color: $f_color1;
-      @include max-screen(1024px) {
-        //font-size: calc($h_fs * 0.75);
-        //line-height: calc($h_fs_2 * 0.75)
-      }
-      @include max-screen(768px) {
-        //font-size: calc($h_fs * 0.5);
-        //line-height: calc($h_fs_2 * 0.5);
+      &:hover{
+        color: $hov;
       }
     }
 
@@ -861,9 +861,12 @@ header {
       line-height: calc($h_fs_2 + 7px);
       color: $f_color1;
       margin-bottom: 30px;
+      &:hover{
+        color: $hov;
+      }
       @include max-screen(1024px) {
-        font-size: calc($h_fs_2 * 0.8);
-        line-height: calc(calc($h_fs_2 + 7px) * 0.8)
+        font-size: calc($h_fs_2 * 0.9);
+        line-height: calc(calc($h_fs_2 + 7px) * 0.9)
       }
     }
 
@@ -909,8 +912,8 @@ header {
     line-height: calc($h_fs_1 + 6px);
     color: $f_color1;
     @include max-screen(1024px) {
-      font-size: calc($h_fs_1 * 0.85);
-      line-height: calc(calc($h_fs_1 + 6px) * 0.85);
+      font-size: calc($h_fs_1 * 0.8);
+      line-height: calc(calc($h_fs_1 + 6px) * 0.8);
     }
   }
 
@@ -922,13 +925,25 @@ header {
     line-height: calc($h_fs_1 + 5px);
     color: $f_color1;
     text-transform: capitalize;
+    &:hover{
+      color: $hov;
+    }
+    @include max-screen(992px) {
+      font-size: calc($h_fs_1 * 0.8);
+      line-height: calc(calc($h_fs_1 + 5px) * 0.8);
+    }
 
     &:after {
       content: "";
       display: block;
       background-image: url("../images/up-right.svg");
+      background-size: cover;
       width: 28px;
       height: 30px;
+      @include max-screen(992px) {
+        width: 20px;
+        height: 22px;
+      }
     }
   }
 
@@ -1134,6 +1149,9 @@ footer {
         line-height: $h_fs;
         color: $f_color1;
         margin-bottom: 14px;
+        &:hover{
+          color: $hov;
+        }
         @include max-screen(992px) {
           margin-bottom: 5px;
         }
@@ -1158,12 +1176,27 @@ footer {
     font-size: $fs_4;
     line-height: $h_fs;
     color: $f_color1;
+    &:hover{
+      color: $hov;
+    }
+    @include max-screen(992px) {
+      font-size: calc($fs_4 * 0.8);
+      line-height: calc($h_fs * 0.8);
+    }
     &:after {
       content: "";
       display: block;
       background-image: url("../images/up-right.svg");
+      background-size: cover;
       width: 28px;
       height: 30px;
+      &:hover{
+        color: $hov;
+      }
+      @include max-screen(992px) {
+        width: 20px;
+        height: 22px;
+      }
     }
   }
   .before1{
@@ -1174,9 +1207,16 @@ footer {
       line-height: $h_fs;
       color: $f_color1;
       margin-right: 5px;
+      @include max-screen(992px) {
+        font-size: calc($fs_4 * 0.8);
+        line-height: calc($h_fs * 0.8);
+      }
     }
   }
   .before2{
+    &:hover{
+      color: $hov;
+    }
     &:before{
       content: "Powered by:";
       font-family: $font2;
@@ -1184,6 +1224,10 @@ footer {
       line-height: $h_fs;
       color: $f_color1;
       margin-right: 5px;
+      @include max-screen(992px) {
+        font-size: calc($fs_4 * 0.8);
+        line-height: calc($h_fs * 0.8);
+      }
     }
   }
 }
