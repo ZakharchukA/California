@@ -56,8 +56,10 @@ $bor_color2: #000000;
 a {
   display: inline-block;
   text-decoration: none;
+  color: inherit;
   &:hover {
     text-decoration: none;
+    color: inherit;
   }
 }
 
@@ -142,10 +144,11 @@ header {
 
 .dineuron-menu .nav li a {
   color: #000000;
+  &:hover {
+    color: $hov;
+  }
 }
-.dineuron-menu .nav li:hover a {
-  color: $hov;
-}
+
 
 .dineuron-menu .nav li {
   @include max-screen(992px) {
@@ -541,6 +544,9 @@ header {
       @include max-screen(376px) {
         padding: 25px 20px 0 20px
       }
+      label{
+        display: none;
+      }
 
       h1, h2 {
         margin-bottom: 19px;
@@ -560,11 +566,22 @@ header {
           margin-bottom: 20px;
         }
       }
-
-      button {
+      .btn{
         max-width: 170px;
         width: 100%;
-        min-height: 50px;
+        height: 50px;
+        font-family:$font1;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: capitalize;
+        color:$f_color1;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+          color: $hov;
+        }
         @include max-screen(992px) {
           min-height: 35px;
         }
@@ -691,11 +708,6 @@ header {
   article {
     box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25);
     transition: .3s;
-
-    &:hover {
-      transform: translateY(22px);
-    }
-
     p {
       font-family: $font1;
       font-size: $fs_1;
@@ -726,6 +738,14 @@ header {
       width: 100%;
       height: 100%;
     }
+    &:hover {
+      p, h4 {
+        color: $hov;
+      }
+    }
+    &:hover {
+      transform: translateY(22px);
+    }
 
   }
 
@@ -747,8 +767,8 @@ header {
   }
 
   .phones, .tablet {
-    a {
-      margin-bottom: 41px;
+    h4 {
+      margin: 0 31px;
       @include max-screen(992px) {
         margin-bottom: 16px;
       }
@@ -766,7 +786,6 @@ header {
 
   article {
     .img-box {
-      //min-height: 270px;
       max-width: 303px;
       width: 100%;
       padding: 28px;
@@ -800,10 +819,6 @@ header {
       min-height: 51px;
       max-width: 261px;
       margin-bottom: 8px;
-      @include max-screen(1024px) {
-        //font-size: calc($fs_base * 0.7);
-        //line-height: calc($fs_3 * 0.7);
-      }
     }
 
     .price {
@@ -816,6 +831,17 @@ header {
         font-size: calc($fs_4 * 0.7);
         line-height: calc($h_fs * 0.7);
       }
+    }
+    &:hover {
+      p, h5 {
+        color: $hov;
+
+      }
+    }
+    &:hover{
+      transition: .5s;
+      box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25);
+      border-radius: 16px;
     }
   }
 }
@@ -835,7 +861,6 @@ header {
     padding: 41px 29px 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     @include max-screen(992px) {
       min-height: 350px;
@@ -860,20 +885,29 @@ header {
       line-height: calc($h_fs_2 + 7px);
       color: $f_color1;
       margin-bottom: 30px;
-      &:hover{
-        color: $hov;
-      }
       @include max-screen(1024px) {
         font-size: calc($h_fs_2 * 0.9);
         line-height: calc(calc($h_fs_2 + 7px) * 0.9)
       }
     }
 
-    button {
+    .btn {
       max-width: 170px;
       width: 100%;
-      min-height: 50px;
+      height: 50px;
+      font-family:$font1;
+      font-size: 18px;
+      line-height: 22px;
+      text-transform: capitalize;
+      color:$f_color1;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       margin-bottom: 30px;
+      &:hover{
+        color: $hov;
+      }
       @include max-screen(992px) {
         min-height: 35px;
       }
@@ -884,6 +918,17 @@ header {
         width: 100%;
         height: auto;
       }
+    }
+    &:hover {
+      p, h4 {
+        color: $hov;
+
+      }
+    }
+    &:hover{
+      transition: .5s;
+      box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25);
+      border-radius: 16px;
     }
   }
 }
@@ -917,8 +962,8 @@ header {
   }
 
   .see_all {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
+    align-items: center;
     font-family: $font1;
     font-size: $h_fs_1;
     line-height: calc($h_fs_1 + 5px);
@@ -1028,7 +1073,6 @@ header {
   }
 
   .line_button {
-    width: content-box;
     height: 42px;
     border: solid 1px $bor_color1;
     background-color: $bg_color3;
@@ -1036,9 +1080,7 @@ header {
     font-size: $fs_base;
     line-height: $fs_3;
     color: $f_color1;
-    padding-right: 22px;
-    padding-left: 22px;
-
+    padding: 0 22px;
     &:hover {
       color: #212529;
       background-color: #f8f9fa;
@@ -1170,7 +1212,7 @@ footer {
   }
   .see_all {
     display: flex;
-    justify-content: center;
+    align-items: center;
     font-family: $font1;
     font-size: $fs_4;
     line-height: $h_fs;
@@ -1179,8 +1221,8 @@ footer {
       color: $hov;
     }
     @include max-screen(992px) {
-      font-size: calc($fs_4 * 0.8);
-      line-height: calc($h_fs * 0.8);
+      font-size: calc($fs_4 * 0.5);
+      line-height: calc($h_fs * 0.5);
     }
     &:after {
       content: "";
@@ -1189,12 +1231,9 @@ footer {
       background-size: cover;
       width: 28px;
       height: 30px;
-      &:hover{
-        color: $hov;
-      }
       @include max-screen(992px) {
-        width: 20px;
-        height: 22px;
+        width: 15px;
+        height: 16px;
       }
     }
   }
@@ -1207,8 +1246,8 @@ footer {
       color: $f_color1;
       margin-right: 5px;
       @include max-screen(992px) {
-        font-size: calc($fs_4 * 0.8);
-        line-height: calc($h_fs * 0.8);
+        font-size: calc($fs_4 * 0.5);
+        line-height: calc($h_fs * 0.5);
       }
     }
   }
@@ -1224,8 +1263,8 @@ footer {
       color: $f_color1;
       margin-right: 5px;
       @include max-screen(992px) {
-        font-size: calc($fs_4 * 0.8);
-        line-height: calc($h_fs * 0.8);
+        font-size: calc($fs_4 * 0.5);
+        line-height: calc($h_fs * 0.5);
       }
     }
   }
