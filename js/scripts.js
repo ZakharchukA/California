@@ -64,3 +64,6 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+
+AOS.init();

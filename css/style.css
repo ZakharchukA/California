@@ -1,6 +1,7 @@
 @import "owl.carousel.css";
 @import "owl.theme.default.css";
 @import "bootstrap.css";
+@import "aos.css";
 @import url("https://fonts.googleapis.com");
 @import url("https://fonts.gstatic.com");
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
@@ -106,6 +107,9 @@ header .navbar {
 }
 .dineuron-menu .nav li a:hover {
   color: #9a9fa4;
+  transition: 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 992px) {

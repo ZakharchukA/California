@@ -2,6 +2,8 @@
 @import "owl.theme.default.css";
 @import "mixin";
 @import "bootstrap.css";
+@import "aos.css";
+
 @import url("https://fonts.googleapis.com");
 @import url("https://fonts.gstatic.com");
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
@@ -146,6 +148,9 @@ header {
   color: #000000;
   &:hover {
     color: $hov;
+    transition: .3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
   }
 }
 
