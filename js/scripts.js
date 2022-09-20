@@ -67,3 +67,4 @@ function hasScrolled() {
 
 
 AOS.init();
+new WOW().init();

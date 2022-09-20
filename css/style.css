@@ -2,6 +2,7 @@
 @import "owl.theme.default.css";
 @import "bootstrap.css";
 @import "aos.css";
+@import "animate.css";
 @import url("https://fonts.googleapis.com");
 @import url("https://fonts.gstatic.com");
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
@@ -834,7 +835,7 @@ header .nav-item .nav-link {
   color: #9a9fa4;
 }
 .best_around article:hover {
-  transition: 0.5s;
+  transition: 0.3s !important;
   box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
 }
