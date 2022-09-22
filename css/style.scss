@@ -56,6 +56,10 @@ $bg_color6: #dce5ec;
 $bor_color1: #C5C5C5;
 $bor_color2: #000000;
 
+* {
+  scroll-behavior: smooth;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -115,17 +119,34 @@ h3 {
 
 }
 
+
 header {
   nav {
     min-height: 80px;
+    div {
+      ul {
+        @include max-screen(992px) {
+          max-width: 250px;
+          width: 100%;
+          li {
+            min-height: 50px;
+          }
+        }
+      }
+    }
   }
-
-}
-
-header {
   .navbar {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .nav-item {
+    .nav-link {
+      font-family: $font1;
+      font-size: $fs_base;
+      line-height: $fs_3;
+      text-transform: uppercase;
+      color: $f_color1;
+    }
   }
 }
 
@@ -356,19 +377,6 @@ header {
   flex-direction: row;
 }
 
-header {
-  .nav-item {
-    .nav-link {
-      font-family: $font1;
-      font-size: $fs_base;
-      line-height: $fs_3;
-      text-transform: uppercase;
-      color: $f_color1;
-
-
-    }
-  }
-}
 
 .dropdown-menu {
   a {
@@ -497,21 +505,6 @@ $reset-time: 150ms;
 }
 
 
-header {
-  nav {
-    div {
-      ul {
-        @include max-screen(992px) {
-          max-width: 250px;
-          width: 100%;
-          li {
-            min-height: 50px;
-          }
-        }
-      }
-    }
-  }
-}
 
 .dropdown {
   .dropdown-toggle {

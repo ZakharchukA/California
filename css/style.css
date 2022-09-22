@@ -15,6 +15,10 @@
   font-style: normal;
   font-display: swap;
 }
+* {
+  scroll-behavior: smooth;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -82,10 +86,25 @@ h3 {
 header nav {
   min-height: 80px;
 }
-
+@media screen and (max-width: 992px) {
+  header nav div ul {
+    max-width: 250px;
+    width: 100%;
+  }
+  header nav div ul li {
+    min-height: 50px;
+  }
+}
 header .navbar {
   padding-left: 15px;
   padding-right: 15px;
+}
+header .nav-item .nav-link {
+  font-family: "interregular";
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #000000;
 }
 
 @media screen and (max-width: 992px) {
@@ -310,14 +329,6 @@ header .navbar {
   flex-direction: row;
 }
 
-header .nav-item .nav-link {
-  font-family: "interregular";
-  font-size: 14px;
-  line-height: 17px;
-  text-transform: uppercase;
-  color: #000000;
-}
-
 .dropdown-menu a {
   font-family: "interregular";
   font-size: 14px;
@@ -425,16 +436,6 @@ header .nav-item .nav-link {
 .search-box input[type=text]:not(:placeholder-shown) + .search-box button[type=reset]:before {
   height: 12px;
   top: 3px;
-}
-
-@media screen and (max-width: 992px) {
-  header nav div ul {
-    max-width: 250px;
-    width: 100%;
-  }
-  header nav div ul li {
-    min-height: 50px;
-  }
 }
 
 .dropdown .dropdown-toggle:after {
